@@ -1,0 +1,51 @@
+# development and production are the same as DRB doesn't handle environments reliably
+development:
+  adapter: mysql2
+  database: local
+  host: 127.0.0.1
+  username: root
+  password: sobakaa
+
+#
+# #DANGER: NEVER supply test: WITH PRODUCTION DATA. THIS IS REGULARLY DROPPED AND RECREATED FROM SCHEMA!!!!!!!!
+test:
+  adapter: mysql2
+  database: local
+  host: 127.0.0.1
+  username: root
+  password: sobakaa
+
+# test:
+#   adapter: sqlite3
+#   database: rails_test
+#   host: 127.0.0.1
+
+
+# TODO: Change to real production setting when deploying to real production server
+# Cap.migrate uses RAILS_ENV="production"
+#production:
+#  adapter: mysql2
+#  database: jws_productionX
+#  host: localhost
+#  username: jws
+#  password: ZNmzcv
+
+archive:
+  adapter: mysql2
+  database: local
+  connect_timeout: 2
+  read_timeout: 10
+  host: 127.0.0.1
+  username: root
+  password: sobakaa
+  port: 3306
+
+
+
+production:
+  adapter: mysql2
+  database: local
+  host: 127.0.0.1
+  username: root
+  password: sobakaa
+  port: 3306
