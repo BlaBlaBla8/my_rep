@@ -24,11 +24,7 @@ test:
 # TODO: Change to real production setting when deploying to real production server
 # Cap.migrate uses RAILS_ENV="production"
 #production:
-#  adapter: mysql2
-#  database: jws_productionX
-#  host: localhost
-#  username: jws
-#  password: ZNmzcv
+
 
 archive:
   adapter: mysql2
