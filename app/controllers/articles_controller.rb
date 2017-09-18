@@ -6,13 +6,6 @@ class ArticlesController < ApplicationController
 
   end
 
-
-  def new
-
-    @article = Article.new
-
-  end
-
   def create
 
 # render plain: params[:article].inspect
@@ -31,11 +24,18 @@ class ArticlesController < ApplicationController
   end
 
 
+  def new
+
+    @article = Article.new
+
+  end
+
   def edit
 
     @article = Article.find(params[:id])
 
   end
+
 
   def show
     @article = Article.find(params[:id])
@@ -56,6 +56,18 @@ class ArticlesController < ApplicationController
       render 'edit'
       flash[:notice] = "an error has occurred while updating"
     end
+  end
+
+  def destroy
+
+    @article = Article.find(params[:id])
+
+    @article.destroy
+
+    flash[:notice] = 'Nice one, it has been deleted'
+
+    redirect_to articles_path
+
   end
 
 
